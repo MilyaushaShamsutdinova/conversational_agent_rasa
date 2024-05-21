@@ -1,0 +1,39 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Hello
+      - Hi
+      - Hey there
+
+  - intent: book_room
+    examples: |
+      - I want to book a music room
+      - Can I reserve a room?
+      - I'd like to book a music room
+
+  - intent: cancel_booking
+    examples: |
+      - Cancel my reservation
+      - I need to cancel my booking
+      - I'd like to cancel my room booking
+
+  - intent: inquire_availability
+    examples: |
+      - Is there any room available?
+      - Can I check room availability?
+      - Are there any free rooms?
+
+  - intent: affirm
+    examples: |
+      - Yes
+      - Sure
+      - Correct
+
+  - intent: goodbye
+    examples: |
+      - Goodbye
+      - See you later
+      - Bye
+

@@ -1,0 +1,32 @@
+version: "3.1"
+
+stories:
+  - story: Book room with confirmation
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: book_room
+      - action: utter_ask_date
+      - intent: inform
+        entities:
+          - date: "2024-05-21"
+      - action: utter_ask_time
+      - intent: inform
+        entities:
+          - time: "10:00"
+      - action: action_book_room
+
+  - story: Cancel booking with confirmation
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: cancel_booking
+      - action: action_cancel_booking
+
+  - story: Check room availability
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: inquire_availability
+      - action: utter_inquire_availability
+

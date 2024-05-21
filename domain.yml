@@ -1,0 +1,47 @@
+version: "3.1"
+
+intents:
+  - greet
+  - book_room
+  - cancel_booking
+  - inquire_availability
+  - affirm
+  - goodbye
+
+entities:
+  - date
+  - time
+
+slots:
+  date:
+    type: text
+  time:
+    type: text
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I help you today?"
+
+  utter_ask_date:
+    - text: "Please provide the date you want to book the room for."
+
+  utter_ask_time:
+    - text: "What time would you like to book the room?"
+
+  utter_confirm_booking:
+    - text: "Your booking is confirmed for {date} at {time}."
+
+  utter_cancel_booking:
+    - text: "Your booking has been canceled."
+
+  utter_inquire_availability:
+    - text: "Please provide the date and time to check availability."
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+
+actions:
+  - action_book_room
+  - action_cancel_booking
+  - action_check_availability
+
